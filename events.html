@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Management Company</title>
+  </head>
+  <body>
+    <h1 onclick="alert('Programmer')">Exploring Events</h1>
+    <h3 onclick="console.log('Programmer2')">Events</h3>
+    <!-- not useful -->
+
+    <h3 onclick="handleClick()">Events3</h3>
+    <h3 onmousemove="mouseOver()">Events4</h3>
+    <h3 onmouseout="mouseOut()">Events5</h3>
+    <h3 onclick="alertClick()">Events6</h3>
+    <button>Click me-1</button>
+    <button id="second">Click me-2</button>
+    <button>Click me-3</button>
+    <button id="last">Click me-4</button>
+
+    <script>
+      function handleClick() {
+        console.log(new Date());
+        // console.log("Someone Clicked me");
+      }
+      function mouseOver() {
+        // console.log(new Date());
+        console.log("Someone is over me");
+      }
+      function mouseOut() {
+        // console.log(new Date());
+        console.log("Someone getting out from me");
+      }
+      function alertClick() {
+        // console.log(new Date());
+        // console.log("Someone getting out from me");
+        alert("clicked at Event 6");
+      }
+
+      // btn2.onclick = function () {
+      //   console.log("second button clicked");
+      // };
+
+      function handleClickBtn() {
+        document.body.style.backgroundColor = "cyan";
+      }
+      // const btn2 = document.getElementById("second");
+      // btn2.onclick = handleClickBtn;
+
+      // const btn2 = document.getElementById("second");
+      // btn2.addEventListener("click", handleClickBtn);
+
+      document.getElementById("last").addEventListener("click", function () {
+        document.body.style.color = "tomato";
+      });
+    </script>
+  </body>
+</html>
